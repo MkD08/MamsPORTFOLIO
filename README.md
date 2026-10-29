@@ -16,6 +16,12 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Formulaire de contact
+
+Le formulaire envoie les demandes via la route Node.js `app/api/contact/route.ts` et l’API Resend. Pour le développement local, copiez `.env.example` vers `.env.local`, puis renseignez `RESEND_API_KEY`, `CONTACT_EMAIL` et `CONTACT_FROM`. Ne publiez jamais la clé API.
+
+Dans Resend, utilisez une adresse d’expéditeur sur un domaine vérifié pour les envois en production. `onboarding@resend.dev` convient aux essais limités. Ajoutez les trois mêmes variables dans les paramètres du projet Vercel avant le déploiement. Les pièces jointes PDF, PNG et JPG/JPEG sont limitées à 5 Mo.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
